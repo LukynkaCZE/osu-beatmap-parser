@@ -1,6 +1,6 @@
 namespace OsuBeatmapParser;
 
-public class HitObject
+public class HitCircle : HitObject
 {
     
 }

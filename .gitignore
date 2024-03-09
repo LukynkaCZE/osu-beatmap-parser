@@ -1,3 +1,6 @@
 OsuBeatmapParser/bin/Debug/net8.0
 OsuBeatmapParser/obj
 packages/NUnit.3.5.0
+.idea/.idea.OsuBeatmapParser/.idea
+OsuBeatmapParser.Tests/bin/Debug/net8.0
+OsuBeatmapParser.Tests/obj

@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsuBeatmapParser", "OsuBeatmapParser\OsuBeatmapParser.csproj", "{3009F0B8-025C-447C-B555-C0CAF99E9F94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsuBeatmapParser.Tests", "OsuBeatmapParser.Tests\OsuBeatmapParser.Tests.csproj", "{4316C951-6B9F-4C3F-BBF2-D68CA4F9B050}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{3009F0B8-025C-447C-B555-C0CAF99E9F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3009F0B8-025C-447C-B555-C0CAF99E9F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3009F0B8-025C-447C-B555-C0CAF99E9F94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4316C951-6B9F-4C3F-BBF2-D68CA4F9B050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4316C951-6B9F-4C3F-BBF2-D68CA4F9B050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4316C951-6B9F-4C3F-BBF2-D68CA4F9B050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4316C951-6B9F-4C3F-BBF2-D68CA4F9B050}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

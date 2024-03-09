@@ -71,6 +71,12 @@ public static class BeatmapDecoder
                 case Sections.TimingPoints:
                     beatmap = SectionDecoder.ParseTimingPoint(beatmap, line);
                     break;
+                case Sections.HitObjects:
+                    beatmap = SectionDecoder.ParseHitobjects(beatmap, line);
+                    break;
+                case Sections.Colours:
+                    beatmap = SectionDecoder.ParseColours(beatmap, line);
+                    break;
             }
         }
         return beatmap;

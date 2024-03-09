@@ -22,9 +22,9 @@ public class Beatmap
     public bool SpecialStyle;
     public bool EpilepsyWarning;
     public bool UseSkinSprites;
-    public int CirclesCount;
-    public int SlidersCount;
-    public int SpinnersCount;
+    // public int CirclesCount;
+    // public int SlidersCount;
+    // public int SpinnersCount;
     public int Length;
     public int BPM;
 
@@ -42,7 +42,7 @@ public class Beatmap
     public string Artist;
     public string ArtistUnicode;
     public string Creator;
-    public string BeatmapVersion;
+    public string VersionDifficulty;
     public string Source;
     public List<String> Tags = new List<string>();
 
@@ -76,4 +76,34 @@ public class Beatmap
 
     public List<TimingPoint> TimingPoints = new List<TimingPoint>();
     public List<HitObject> HitObjects = new List<HitObject>();
+
+    public double BeatLengthAt(int offset)
+    {
+        if (TimingPoints.Count == 0) return 0;
+
+        var timingPoint = 0;
+        var samplePoint = 0;
+
+        for (var i = 0; i < TimingPoints.Count; i++)
+        {
+            if (TimingPoints[i].Offset <= offset)
+            {
+                if (TimingPoints[i].Inherited) samplePoint = i; else timingPoint = i;
+            }
+        }
+        
+        double multiplier = 1;
+        if (samplePoint <= timingPoint || !(TimingPoints[samplePoint].BeatLength < 0))
+            return TimingPoints[timingPoint].BeatLength * multiplier;
+        if (TimingPoints[samplePoint].BeatLength >= 0)
+        {
+            multiplier = 1;
+        }
+        else
+        {
+            multiplier = double.Clamp((float)-TimingPoints[samplePoint].BeatLength, 10, 100) / 100f;
+        }
+
+        return TimingPoints[timingPoint].BeatLength * multiplier;
+    }
 }
