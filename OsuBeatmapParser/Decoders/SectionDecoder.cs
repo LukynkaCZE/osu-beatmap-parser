@@ -255,7 +255,7 @@ public static class SectionDecoder
                 beatmap.Title = value;
                 break;
             case "TitleUnicode":
-                beatmap.Title = value;
+                beatmap.TitleUnicode = value;
                 break;
             case "Artist":
                 beatmap.Artist = value;
